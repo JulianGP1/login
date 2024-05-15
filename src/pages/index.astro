@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Counter from '../components/vue/Counter.vue'
+---
+<Layout title="Welcome to Astro.">
+    <div class="container flex justify-center items-center h-screen">
+        <div class="h-80 bg-purple-100 flex flex-col items-center justify-center relative rounded-2xl">
+            <img src="https://i.pinimg.com/736x/6d/f7/12/6df712731e0cad8c26d764cead6e029e.jpg" alt="" class="rounded-full w-16 absolute -top-7">
+            <div class="mb-4 flex flex-col items-center">
+                <label for="username" class="relative mb-2">
+                    <input id="username" type="text" placeholder="UserName " class="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+                    <img src="https://th.bing.com/th/id/R.7f70ccdaea42a3ea7f34f470040c1b29?rik=XpAJhC2Net1BXg&pid=ImgRaw&r=0" alt="Icono" class="absolute top-1/2 transform -translate-y-1/2 left-3 w-4 h-4">
+                </label>
+                <label for="Password" class="relative">
+                    <input  type="text" placeholder="Password " class="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200">
+                    <img src="https://th.bing.com/th/id/OIP.EyHJ8cuHyCsD9Zfr6at5AQHaHa?rs=1&pid=ImgDetMain alt="Icono" class="absolute top-1/2 transform -translate-y-1/2 left-3 w-4 h-4">
+                </label>
+            </div>
+            <button class="border border-neutral-700 rounded-full bg-slate-400">
+                Summit
+            </button>
+        </div>
+    </div>
+    <Counter client:load />
+</Layout>
